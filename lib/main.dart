@@ -30,10 +30,16 @@ class HomePage extends StatelessWidget{
        body: Center(
         child: Column(
           children: <Widget>[
-            Text("Codigo Gerado: $qr_text"),
-
+            SizedBox(height: 16,),
+            Text("Codigo Gerado: $qr_text",
+              style: TextStyle(
+                fontSize: 30,
+              ),
+            ),
+            SizedBox(height: 16,),
             QrImage(
               data: qr_text,
+              size: 300,
             ),
           ],
         ),
