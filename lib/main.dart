@@ -21,7 +21,7 @@ class HomePage extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
 
-    final String qr_text = '123456';
+    final String qr_text = 'Almeida';
 
     return Scaffold (
       appBar: AppBar(
@@ -32,6 +32,7 @@ class HomePage extends StatelessWidget{
           children: <Widget>[
             SizedBox(height: 16,),
             Text("Codigo Gerado: $qr_text",
+              textAlign: TextAlign.center,
               style: TextStyle(
                 fontSize: 30,
               ),
@@ -40,6 +41,8 @@ class HomePage extends StatelessWidget{
             QrImage(
               data: qr_text,
               size: 300,
+              gapless: true,
+              errorCorrectionLevel: QrErrorCorrectLevel.Q,
             ),
           ],
         ),
